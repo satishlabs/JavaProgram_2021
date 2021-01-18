@@ -20,5 +20,22 @@ public class MethodReferecesLambdaExpressionMain {
 						System.out.println(country);
 					}
 				});
+        
+        System.out.println("=======================");
+        System.out.println("Using lambda expression");
+        System.out.println("=======================");
+ 
+     // Using lambda expression
+        countryList.stream().forEach(
+        		country -> System.out.println(country)
+        		);
+        System.out.println("=======================");
+        System.out.println("Using Method references");
+        System.out.println("=======================");
+ 
+      // Using method reference
+        countryList.stream().forEach(
+        		System.out::println
+        		);
 	}
 }
