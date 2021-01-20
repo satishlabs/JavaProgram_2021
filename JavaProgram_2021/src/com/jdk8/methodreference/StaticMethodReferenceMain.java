@@ -20,5 +20,17 @@ public class StaticMethodReferenceMain {
 		
 		List<Integer> calculatePowForList1 = PowerFunctions.calculatePowOf2ForList(list, function1);
 		System.out.println(calculatePowForList1);
+		
+		 // Using lambda expression
+        Function<Integer,Integer> function2 = (num) -> PowerFunctions.power(num);
+ 
+        List<Integer> calculatePowForList2 = PowerFunctions.calculatePowOf2ForList(list, function2); 
+        System.out.println(calculatePowForList2);
+ 
+        // Using Method reference
+        Function<Integer,Integer> function3 = PowerFunctions::power;
+ 
+        List<Integer> calculatePowForList3 = PowerFunctions.calculatePowOf2ForList(list, function3); 
+        System.out.println(calculatePowForList3);
 	}
 }
