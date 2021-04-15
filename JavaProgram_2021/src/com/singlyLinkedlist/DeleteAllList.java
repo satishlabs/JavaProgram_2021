@@ -19,10 +19,23 @@ public class DeleteAllList {
 		list.insert(4);
 		System.out.println("\nCreated Linked List: ");
 		list.displayList();
+		
+		System.out.println("\nDeleting the list");
+		list.deleteList();
+		System.out.println("\nLinkedList deleted");
+	}
+
+	private void deleteList() {
+		head =null;
+		
 	}
 
 	private void displayList() {
-		
+		Node temp = head;
+		while(temp != null) {
+			System.out.print(temp.data+" ");
+			temp = temp.next;
+		}
 		
 	}
 
